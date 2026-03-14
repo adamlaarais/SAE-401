@@ -92,8 +92,8 @@ abstract class Config
     /*******************************************************
     Paramètres de connexion à la base de données
      *******************************************************/
-    public static $DB_host = "iutmmmisql01.uha.fr";
-    public static $DB_name = "e2402726";
-    public static $DB_user = "e2402726";
-    public static $DB_pwd  = "516933";
+    public static $DB_host = "localhost";
+    public static $DB_name = "kodex";
+    public static $DB_user = "root";
+    public static $DB_pwd  = "";
 }
