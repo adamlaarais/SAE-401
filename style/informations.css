@@ -1,0 +1,711 @@
+/* ========================================
+   PAGE QUI SOMMES-NOUS - KODEX
+   ======================================== */
+
+body {
+    background-color: var(--fond);
+    color: var(--texte);
+}
+
+/* Titres avec parties en rouge */
+h1 strong,
+h2 strong {
+    color: var(--rouge);
+}
+
+.informations-page {
+    background: var(--fond);
+    color: var(--texte);
+    min-height: 100vh;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.info-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--fond) 0%, var(--fond2) 100%);
+    overflow: hidden;
+}
+
+.info-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(189, 39, 52, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(189, 39, 52, 0.08) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.info-hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    color: var(--texte);
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0;
+}
+
+.hero-subtitle strong {
+    color: var(--rouge);
+    font-weight: 700;
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+.info-section {
+    padding: 5rem 2rem;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   HISTOIRE SECTION
+   ======================================== */
+
+.info-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.info-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+.info-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--rouge);
+    border-radius: 2px;
+}
+
+.info-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(247, 248, 249, 0.85);
+    margin: 0 0 1.2rem 0;
+}
+
+.info-text strong {
+    color: var(--rouge);
+    font-weight: 600;
+}
+
+.info-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--fond2) 0%, rgba(189, 39, 52, 0.1) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.image-placeholder:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: var(--rouge);
+    box-shadow: 0 10px 40px rgba(189, 39, 52, 0.3);
+}
+
+.image-placeholder svg {
+    color: var(--rouge);
+    opacity: 0.6;
+}
+
+/* ========================================
+   MISSION & VALEURS SECTION
+   ======================================== */
+
+.mission-section {
+    background: var(--fond2);
+}
+
+.section-title-center {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: var(--texte);
+}
+
+.mission-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+    color: rgba(247, 248, 249, 0.85);
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.valeur-card {
+    background: var(--fond);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(189, 39, 52, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.valeur-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rouge), rgba(189, 39, 52, 0.3));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.valeur-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--rouge);
+    box-shadow: 0 15px 40px rgba(189, 39, 52, 0.2);
+}
+
+.valeur-card:hover::before {
+    transform: scaleX(1);
+}
+
+.valeur-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    background: linear-gradient(135deg, rgba(189, 39, 52, 0.1), rgba(189, 39, 52, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    transition: all 0.3s ease;
+}
+
+.valeur-card:hover .valeur-icon {
+    background: rgba(189, 39, 52, 0.15);
+    border-color: var(--rouge);
+    transform: rotate(360deg);
+}
+
+.valeur-icon svg {
+    color: var(--rouge);
+}
+
+.valeur-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.valeur-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(247, 248, 249, 0.75);
+    margin: 0;
+}
+
+/* ========================================
+   STATISTIQUES SECTION
+   ======================================== */
+
+.stats-section {
+    background: linear-gradient(135deg, var(--fond) 0%, var(--fond2) 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(189, 39, 52, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: statPulse 3s ease-in-out infinite;
+}
+
+@keyframes statPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+}
+
+.stat-number {
+    position: relative;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--rouge);
+    margin: 0 0 0.5rem 0;
+    line-height: 1;
+}
+
+.stat-label {
+    position: relative;
+    z-index: 2;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(247, 248, 249, 0.8);
+}
+
+/* ========================================
+   PROJET ÉTUDIANT SECTION
+   ======================================== */
+
+.projet-section {
+    background: var(--fond2);
+}
+
+.projet-card {
+    background: linear-gradient(135deg, var(--fond) 0%, rgba(189, 39, 52, 0.05) 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.projet-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(189, 39, 52, 0.05) 0%, transparent 50%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.projet-badge {
+    display: inline-block;
+    background: var(--rouge);
+    color: var(--texte);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.projet-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.projet-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(247, 248, 249, 0.85);
+    margin: 0 0 1rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.projet-card strong {
+    color: var(--rouge);
+    font-weight: 600;
+}
+
+.projet-logos {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.projet-logo {
+    background: var(--fond2);
+    color: var(--texte);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(189, 39, 52, 0.3);
+    transition: all 0.3s ease;
+}
+
+.projet-logo:hover {
+    background: rgba(189, 39, 52, 0.1);
+    border-color: var(--rouge);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   CALL TO ACTION
+   ======================================== */
+
+.info-cta {
+    background-color: var(--fond);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.cta-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0 0 2.5rem 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn.primary {
+    background: var(--rouge);
+    color: var(--texte);
+    border: 2px solid var(--rouge);
+}
+
+.cta-btn.primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.cta-btn.primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.cta-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(189, 39, 52, 0.4);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: var(--texte);
+    border: 2px solid var(--rouge);
+}
+
+.cta-btn.secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(189, 39, 52, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-btn.secondary:hover::before {
+    left: 100%;
+}
+
+.cta-btn.secondary:hover {
+    background: rgba(189, 39, 52, 0.1);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .info-hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .info-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .info-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-title-center {
+        font-size: 2rem;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .info-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .info-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .info-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .info-text p {
+        font-size: 1rem;
+    }
+
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+
+    .mission-text {
+        font-size: 1.1rem;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+
+    .projet-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .projet-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .projet-card p {
+        font-size: 1rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-hero h1 {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projet-logos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ========================================
+   SUPPRESSION BORDURE FOOTER
+   ======================================== */
+
+body:has(.informations-page) footer {
+    margin-top: 0;
+}

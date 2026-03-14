@@ -1,0 +1,156 @@
+body {
+    background-color: var(--fond);
+}
+
+/* Container Principal */
+.succes-wrapper {
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* En-tête (identique à la page paiement) */
+.succes-entete {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.succes-entete h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.succes-entete p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--texte);
+}
+
+/* L'encadré principal du message */
+.succes-box {
+    background-color: var(--fond2);
+    border: 1px solid rgba(189, 39, 52, 0.5);
+    /* Bordure rouge subtile */
+    border-radius: 16px;
+    padding: 80px 40px;
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* Espace entre les 3 blocs de texte */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Le titre rouge de remerciement */
+.succes-titre {
+    color: var(--rouge);
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Le texte explicatif central */
+.succes-texte {
+    color: var(--texte);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Le petit texte de contact en bas */
+.succes-contact {
+    color: rgba(247, 248, 249, 0.7);
+    /* Blanc légèrement transparent */
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive basique */
+@media (max-width: 1024px) {
+    .succes-wrapper {
+        padding-top: 100px;
+    }
+
+    .succes-entete h1 {
+        font-size: 38px;
+    }
+
+    .succes-box {
+        padding: 60px 30px;
+        gap: 50px;
+        max-width: 700px;
+    }
+
+    .succes-titre {
+        font-size: 28px;
+    }
+
+    .succes-texte {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .succes-wrapper {
+        padding-top: 90px;
+    }
+
+    .succes-entete h1 {
+        font-size: 32px;
+    }
+
+    .succes-entete p {
+        font-size: 15px;
+    }
+
+    .succes-box {
+        padding: 50px 20px;
+        gap: 40px;
+    }
+
+    .succes-titre {
+        font-size: 24px;
+    }
+
+    .succes-texte {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .succes-wrapper {
+        padding-top: 80px;
+    }
+
+    .succes-entete h1 {
+        font-size: 26px;
+    }
+
+    .succes-box {
+        padding: 30px 16px;
+        gap: 30px;
+        width: 95%;
+    }
+
+    .succes-titre {
+        font-size: 20px;
+    }
+
+    .succes-texte {
+        font-size: 14px;
+    }
+
+    .succes-contact {
+        font-size: 12px;
+    }
+}

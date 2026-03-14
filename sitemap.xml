@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://www.kodex.fr/index.php</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Nos Aventures -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=aventures</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Entreprise -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=entreprise</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Offrir -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=offrir</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Actualités -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=actualites</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Qui sommes-nous -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=informations</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Contact -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=contact</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Réservation -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=reservation</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Panier -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=panier</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Inscription / Compte -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=inscription</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Profil utilisateur -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=profil</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- FAQ -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=faq</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Pages légales -->
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=mentions</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=cgv</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=cookies</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://www.kodex.fr/index.php?action=confidentialite</loc>
+        <lastmod>2026-03-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>

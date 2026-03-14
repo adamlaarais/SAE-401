@@ -1,0 +1,226 @@
+/* ========================================
+   PAGE ERREUR - KODEX
+   ======================================== */
+
+body {
+    background-color: var(--fond);
+    color: var(--texte);
+}
+
+.erreur-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.erreur-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    animation: erreur-fadeIn 0.8s ease-out;
+}
+
+@keyframes erreur-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Illustration / Code ── */
+
+.erreur-illustration {
+    position: relative;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.erreur-code-display {
+    position: relative;
+    z-index: 2;
+}
+
+.erreur-code-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8rem;
+    font-weight: 900;
+    color: transparent;
+    background: linear-gradient(135deg, var(--rouge) 0%, rgba(189, 39, 52, 0.4) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    user-select: none;
+}
+
+.erreur-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 20px rgba(189, 39, 52, 0.3));
+}
+
+.erreur-icon-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(189, 39, 52, 0.15) 0%, transparent 70%);
+    animation: erreur-pulse 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes erreur-pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 1;
+    }
+}
+
+/* ── Contenu texte ── */
+
+.erreur-contenu {
+    margin-bottom: 2.5rem;
+}
+
+.erreur-titre {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.erreur-message {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(247, 248, 249, 0.75);
+    margin: 0 0 1rem 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.erreur-code-interne {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(189, 39, 52, 0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* ── Boutons d'action ── */
+
+.erreur-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.erreur-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.erreur-btn-primary {
+    background: var(--rouge);
+    color: var(--texte);
+    border-color: var(--rouge);
+}
+
+.erreur-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(189, 39, 52, 0.4);
+}
+
+.erreur-btn-secondary {
+    background: transparent;
+    color: var(--texte);
+    border-color: var(--rouge);
+}
+
+.erreur-btn-secondary:hover {
+    background: rgba(189, 39, 52, 0.1);
+    transform: translateY(-2px);
+}
+
+.erreur-btn-ghost {
+    background: transparent;
+    color: rgba(247, 248, 249, 0.6);
+    border-color: rgba(247, 248, 249, 0.15);
+}
+
+.erreur-btn-ghost:hover {
+    color: var(--texte);
+    border-color: rgba(247, 248, 249, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+    .erreur-code-number {
+        font-size: 5rem;
+    }
+
+    .erreur-titre {
+        font-size: 1.5rem;
+    }
+
+    .erreur-message {
+        font-size: 1rem;
+    }
+
+    .erreur-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .erreur-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .erreur-code-number {
+        font-size: 4rem;
+    }
+
+    .erreur-page {
+        padding: 100px 15px 40px;
+    }
+}

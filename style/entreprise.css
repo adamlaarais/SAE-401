@@ -1,0 +1,625 @@
+/* ========================================
+   PAGE ENTREPRISE - KODEX
+   ======================================== */
+
+body {
+    background-color: var(--fond);
+    color: var(--texte);
+}
+
+h1 strong,
+h2 strong {
+    color: var(--rouge);
+}
+
+.entreprise-page {
+    background: var(--fond);
+    color: var(--texte);
+    min-height: 100vh;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.entreprise-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--fond) 0%, var(--fond2) 100%);
+    overflow: hidden;
+}
+
+.entreprise-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 60%, rgba(189, 39, 52, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 40%, rgba(189, 39, 52, 0.08) 0%, transparent 50%);
+    animation: entreprise-pulse 8s ease-in-out infinite;
+}
+
+@keyframes entreprise-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.entreprise-hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    animation: entreprise-fadeInUp 1s ease-out;
+}
+
+@keyframes entreprise-fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.entreprise-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    color: var(--texte);
+    letter-spacing: -0.02em;
+}
+
+.entreprise-hero-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0;
+}
+
+.entreprise-hero-subtitle strong {
+    color: var(--rouge);
+    font-weight: 700;
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+.entreprise-section {
+    padding: 5rem 2rem;
+}
+
+.entreprise-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.entreprise-title-center {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: var(--texte);
+}
+
+/* ========================================
+   INTRO / COHESION
+   ======================================== */
+
+.entreprise-intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.entreprise-intro-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+.entreprise-intro-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--rouge);
+    border-radius: 2px;
+}
+
+.entreprise-intro-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(247, 248, 249, 0.85);
+    margin: 0 0 1.2rem 0;
+}
+
+.entreprise-intro-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entreprise-visual-box {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--fond2) 0%, rgba(189, 39, 52, 0.1) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.entreprise-visual-box:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: var(--rouge);
+    box-shadow: 0 10px 40px rgba(189, 39, 52, 0.3);
+}
+
+.entreprise-visual-box svg {
+    color: var(--rouge);
+    opacity: 0.6;
+}
+
+/* ========================================
+   AVANTAGES
+   ======================================== */
+
+.entreprise-avantages-section {
+    background: var(--fond2);
+}
+
+.entreprise-avantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.entreprise-avantage-card {
+    background: var(--fond);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(189, 39, 52, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.entreprise-avantage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rouge), rgba(189, 39, 52, 0.3));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.entreprise-avantage-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--rouge);
+    box-shadow: 0 15px 40px rgba(189, 39, 52, 0.2);
+}
+
+.entreprise-avantage-card:hover::before {
+    transform: scaleX(1);
+}
+
+.entreprise-avantage-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    background: linear-gradient(135deg, rgba(189, 39, 52, 0.1), rgba(189, 39, 52, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    transition: all 0.3s ease;
+}
+
+.entreprise-avantage-card:hover .entreprise-avantage-icon {
+    background: rgba(189, 39, 52, 0.15);
+    border-color: var(--rouge);
+    transform: rotate(360deg);
+}
+
+.entreprise-avantage-icon svg {
+    color: var(--rouge);
+}
+
+.entreprise-avantage-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.entreprise-avantage-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(247, 248, 249, 0.75);
+    margin: 0;
+}
+
+/* ========================================
+   OFFRES
+   ======================================== */
+
+.entreprise-offres-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.entreprise-offre-card {
+    background: var(--fond2);
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    border: 2px solid rgba(189, 39, 52, 0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.entreprise-offre-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--rouge);
+    box-shadow: 0 15px 40px rgba(189, 39, 52, 0.2);
+}
+
+.entreprise-offre-icon {
+    margin: 0 auto 1.5rem auto;
+}
+
+.entreprise-offre-icon svg {
+    color: var(--rouge);
+}
+
+.entreprise-offre-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.entreprise-offre-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.entreprise-offre-details {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(189, 39, 52, 0.15);
+}
+
+.entreprise-offre-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(247, 248, 249, 0.7);
+}
+
+.entreprise-offre-detail svg {
+    color: var(--rouge);
+    flex-shrink: 0;
+}
+
+/* ========================================
+   TÉMOIGNAGES
+   ======================================== */
+
+.entreprise-temoignages-section {
+    background: var(--fond2);
+}
+
+.entreprise-temoignages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.entreprise-temoignage-card {
+    background: var(--fond);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(189, 39, 52, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.entreprise-temoignage-card:hover {
+    border-color: rgba(189, 39, 52, 0.3);
+    box-shadow: 0 10px 30px rgba(189, 39, 52, 0.15);
+}
+
+.entreprise-temoignage-quote {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--rouge);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.entreprise-temoignage-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(247, 248, 249, 0.85);
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+    font-style: italic;
+}
+
+.entreprise-temoignage-auteur {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(189, 39, 52, 0.1);
+}
+
+.entreprise-temoignage-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--rouge), rgba(189, 39, 52, 0.6));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--texte);
+    flex-shrink: 0;
+}
+
+.entreprise-temoignage-nom {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texte);
+}
+
+.entreprise-temoignage-poste {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(247, 248, 249, 0.6);
+    margin-top: 0.2rem;
+}
+
+/* ========================================
+   CTA
+   ======================================== */
+
+.entreprise-cta {
+    background-color: var(--fond);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.entreprise-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.entreprise-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.entreprise-cta-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.entreprise-cta-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0 0 2.5rem 0;
+}
+
+.entreprise-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.entreprise-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.entreprise-cta-btn.primary {
+    background: var(--rouge);
+    color: var(--texte);
+    border: 2px solid var(--rouge);
+}
+
+.entreprise-cta-btn.primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.entreprise-cta-btn.primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.entreprise-cta-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(189, 39, 52, 0.4);
+}
+
+.entreprise-cta-btn.secondary {
+    background: transparent;
+    color: var(--texte);
+    border: 2px solid var(--rouge);
+}
+
+.entreprise-cta-btn.secondary:hover {
+    background: rgba(189, 39, 52, 0.1);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   SUPPRESSION BORDURE FOOTER
+   ======================================== */
+
+body:has(.entreprise-page) footer {
+    margin-top: 0;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .entreprise-hero h1 {
+        font-size: 3rem;
+    }
+
+    .entreprise-intro-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .entreprise-intro-text h2 {
+        font-size: 2rem;
+    }
+
+    .entreprise-title-center {
+        font-size: 2rem;
+    }
+
+    .entreprise-offres-grid,
+    .entreprise-temoignages-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .entreprise-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .entreprise-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .entreprise-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .entreprise-hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .entreprise-avantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entreprise-visual-box {
+        width: 250px;
+        height: 250px;
+    }
+
+    .entreprise-cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .entreprise-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .entreprise-cta-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .entreprise-hero h1 {
+        font-size: 2rem;
+    }
+
+    .entreprise-offre-details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

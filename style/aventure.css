@@ -1,0 +1,488 @@
+body {
+    margin: 0;
+    background-color: var(--fond);
+    color: var(--texte);
+    font-family: "Montserrat", sans-serif;
+}
+
+.aventure-page {
+    max-width: 1100px;
+    margin: 140px auto 50px; 
+    padding: 0 20px;
+}
+
+.btn-retour {
+    display: inline-block;
+    color: var(--texte);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.btn-retour:hover {
+    color: var(--rouge);
+}
+
+.titre-aventure {
+    text-align: left;
+    color: var(--rouge);
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.presentation-flex {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.image-aventure {
+    flex: 1;
+}
+
+.image-aventure img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    border: solid 2px var(--rouge);
+    border-radius: 20px;
+}
+
+.details-aventure {
+    flex: 1;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.badges-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.badge {
+    border: 1px solid var(--rouge);
+    background-color: var(--fond2);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+.achat-bloc {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.prix-detail {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--rouge);
+}
+
+.prix-detail small {
+    font-size: 0.9rem;
+    color: var(--texte);
+    font-weight: normal;
+}
+
+.btn-reserver-rouge {
+    background-color: var(--rouge);
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-reserver-rouge:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.tutoriel {
+    text-align: center;
+}
+
+.tutoriel h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.tutoriel h2 span {
+    color: var(--rouge);
+}
+
+.etapes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.etape-carte {
+    background-color: var(--fond2);
+    border: 1px solid var(--rouge);
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+.cercle-num {
+    background-color: var(--rouge);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-weight: bold;
+}
+
+.etape-carte h3 {
+    margin-bottom: 15px;
+}
+
+.etape-carte p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ── ÉCRIRE UN AVIS ── */
+.section-avis-local {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid var(--rouge);
+}
+
+.section-avis-local h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-avis-local h2 span {
+    color: var(--rouge);
+}
+
+/* Carte conteneur du formulaire */
+.carte-formulaire-avis {
+    max-width: 620px;
+    margin: 0 auto 60px;
+    background-color: var(--fond2);
+    border: 1px solid var(--rouge);
+    border-radius: 20px;
+    padding: 30px 35px;
+}
+
+.formulaire-avis-entete {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(189, 39, 52, 0.3);
+}
+
+.formulaire-avis {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.champ-avis {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.champ-avis label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+}
+
+/* Support du wrapper .form_elt généré par la classe Formulaire */
+.champ-avis .form_elt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 1;
+}
+
+.champ-avis .form_elt > span {
+    opacity: 0.7;
+}
+
+.champ-avis textarea {
+    background-color: var(--fond);
+    border: 1px solid rgba(189, 39, 52, 0.4);
+    border-radius: 12px;
+    color: var(--texte);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    padding: 14px 16px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    line-height: 1.6;
+}
+
+.champ-avis textarea:focus {
+    border-color: var(--rouge);
+    box-shadow: 0 0 0 3px rgba(189, 39, 52, 0.15);
+}
+
+/* Rang étoiles + label */
+.etoiles-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.etoiles-input {
+    display: flex;
+    gap: 4px;
+}
+
+.etoile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    transition: transform 0.15s;
+    line-height: 0;
+}
+
+.etoile-btn svg path {
+    fill: none;
+    stroke: rgba(255,255,255,0.3);
+    transition: fill 0.12s, stroke 0.12s;
+}
+
+.etoile-btn:hover svg path,
+.etoile-btn.active svg path {
+    fill: #FFEF5E;
+    stroke: #FFEF5E;
+}
+
+.etoile-btn:hover {
+    transform: scale(1.2);
+}
+
+.etoile-btn.active {
+    transform: scale(1.1);
+}
+
+.note-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #FFEF5E;
+    min-width: 120px;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.btn-soumettre-avis {
+    align-self: flex-start;
+    background-color: var(--rouge);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 12px 35px;
+    margin-top: 4px;
+    transition: filter 0.2s, transform 0.2s;
+}
+
+.btn-soumettre-avis:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.avis-locaux {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.carte-avis-local {
+    background-color: var(--fond2);
+    border: 1px solid var(--rouge);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.avis-local-entete {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.avis-local-etoiles {
+    display: flex;
+    gap: 2px;
+}
+
+.carte-avis-local p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.85;
+}
+
+.aucun-avis-local {
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.95rem;
+}
+
+.notif-avis-ok {
+    text-align: center;
+    color: #4caf50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.notif-avis-erreur {
+    text-align: center;
+    color: var(--rouge);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.message-connexion-avis {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.message-connexion-avis a {
+    color: var(--rouge);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.message-connexion-avis a:hover {
+    text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE AVENTURE (DETAIL)
+   ══════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+    .image-aventure img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .presentation-flex {
+        gap: 40px;
+    }
+
+    .titre-aventure {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .prix-detail {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .aventure-page {
+        margin: 100px auto 40px;
+    }
+
+    .presentation-flex {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .image-aventure img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .titre-aventure {
+        font-size: 2.2rem;
+    }
+
+    .etapes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achat-bloc {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .avis-locaux {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .aventure-page {
+        padding: 0 16px;
+    }
+
+    .titre-aventure {
+        font-size: 1.8rem;
+    }
+
+    .image-aventure img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .badges-info {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .etapes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carte-formulaire-avis {
+        padding: 20px;
+    }
+
+    .prix-detail {
+        font-size: 1.8rem;
+    }
+}

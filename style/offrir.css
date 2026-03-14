@@ -1,0 +1,1109 @@
+/* ========================================
+   PAGE OFFRIR - KODEX
+   ======================================== */
+
+body {
+    background-color: var(--fond);
+    color: var(--texte);
+}
+
+h1 strong,
+h2 strong {
+    color: var(--rouge);
+}
+
+.offrir-page {
+    background: var(--fond);
+    color: var(--texte);
+    min-height: 100vh;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.offrir-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--fond) 0%, var(--fond2) 100%);
+    overflow: hidden;
+}
+
+.offrir-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(189, 39, 52, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(189, 39, 52, 0.08) 0%, transparent 50%);
+    animation: offrir-pulse 8s ease-in-out infinite;
+}
+
+@keyframes offrir-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.offrir-hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    animation: offrir-fadeInUp 1s ease-out;
+}
+
+@keyframes offrir-fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.offrir-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    color: var(--texte);
+    letter-spacing: -0.02em;
+}
+
+.offrir-hero-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0;
+}
+
+.offrir-hero-subtitle strong {
+    color: var(--rouge);
+    font-weight: 700;
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+.offrir-section {
+    padding: 5rem 2rem;
+}
+
+.offrir-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offrir-title-center {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: var(--texte);
+}
+
+/* ========================================
+   ÉTAPES
+   ======================================== */
+
+.offrir-etapes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.offrir-etape-card {
+    background: var(--fond2);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(189, 39, 52, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.offrir-etape-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rouge), rgba(189, 39, 52, 0.3));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.offrir-etape-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--rouge);
+    box-shadow: 0 15px 40px rgba(189, 39, 52, 0.2);
+}
+
+.offrir-etape-card:hover::before {
+    transform: scaleX(1);
+}
+
+.offrir-etape-numero {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--rouge);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.offrir-etape-card:hover .offrir-etape-numero {
+    opacity: 1;
+}
+
+.offrir-etape-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem auto;
+    background: linear-gradient(135deg, rgba(189, 39, 52, 0.1), rgba(189, 39, 52, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    transition: all 0.3s ease;
+}
+
+.offrir-etape-card:hover .offrir-etape-icon {
+    border-color: var(--rouge);
+    background: rgba(189, 39, 52, 0.15);
+}
+
+.offrir-etape-icon svg {
+    color: var(--rouge);
+}
+
+.offrir-etape-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--texte);
+    margin: 0 0 0.8rem 0;
+}
+
+.offrir-etape-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(247, 248, 249, 0.75);
+    margin: 0;
+}
+
+/* ========================================
+   FORMULES / PRICING
+   ======================================== */
+
+.offrir-formules-section {
+    background: var(--fond2);
+}
+
+.offrir-formules-intro {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0 0 3rem 0;
+}
+
+.offrir-formules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.offrir-formule-card {
+    background: var(--fond);
+    border-radius: 18px;
+    border: 2px solid rgba(189, 39, 52, 0.15);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.offrir-formule-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(189, 39, 52, 0.4);
+    box-shadow: 0 15px 40px rgba(189, 39, 52, 0.15);
+}
+
+.offrir-formule-populaire {
+    border-color: var(--rouge);
+    box-shadow: 0 0 30px rgba(189, 39, 52, 0.2);
+}
+
+.offrir-formule-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rouge);
+    color: var(--texte);
+    padding: 0.4rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.offrir-formule-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(189, 39, 52, 0.15);
+}
+
+.offrir-formule-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.offrir-formule-prix {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.offrir-prix-valeur {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--rouge);
+    line-height: 1;
+}
+
+.offrir-prix-detail {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: rgba(247, 248, 249, 0.6);
+}
+
+.offrir-formule-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+}
+
+.offrir-formule-liste li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.7rem 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: rgba(247, 248, 249, 0.85);
+    border-bottom: 1px solid rgba(189, 39, 52, 0.08);
+}
+
+.offrir-formule-liste li:last-child {
+    border-bottom: none;
+}
+
+.offrir-formule-liste li svg {
+    color: var(--rouge);
+    flex-shrink: 0;
+}
+
+.offrir-formule-btn {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid var(--rouge);
+    color: var(--texte);
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.offrir-formule-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(189, 39, 52, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.offrir-formule-btn:hover::before {
+    left: 100%;
+}
+
+.offrir-formule-btn:hover {
+    background: rgba(189, 39, 52, 0.1);
+    transform: translateY(-2px);
+}
+
+.offrir-btn-populaire {
+    background: var(--rouge);
+    border-color: var(--rouge);
+}
+
+.offrir-btn-populaire:hover {
+    background: var(--rouge);
+    box-shadow: 0 8px 25px rgba(189, 39, 52, 0.4);
+}
+
+/* ========================================
+   RAISONS
+   ======================================== */
+
+.offrir-raisons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.offrir-raison-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.offrir-raison-card:hover {
+    background: var(--fond2);
+}
+
+.offrir-raison-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    background: linear-gradient(135deg, rgba(189, 39, 52, 0.1), rgba(189, 39, 52, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    transition: all 0.3s ease;
+}
+
+.offrir-raison-card:hover .offrir-raison-icon {
+    border-color: var(--rouge);
+    transform: rotate(360deg);
+}
+
+.offrir-raison-icon svg {
+    color: var(--rouge);
+}
+
+.offrir-raison-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--texte);
+    margin: 0 0 0.8rem 0;
+}
+
+.offrir-raison-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(247, 248, 249, 0.75);
+    margin: 0;
+}
+
+/* ========================================
+   CTA
+   ======================================== */
+
+.offrir-cta {
+    background-color: var(--fond);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.offrir-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.offrir-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.offrir-cta-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin: 0 0 1rem 0;
+}
+
+.offrir-cta-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(247, 248, 249, 0.8);
+    margin: 0 0 2.5rem 0;
+}
+
+.offrir-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.offrir-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.offrir-cta-btn.primary {
+    background: var(--rouge);
+    color: var(--texte);
+    border: 2px solid var(--rouge);
+}
+
+.offrir-cta-btn.primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.offrir-cta-btn.primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.offrir-cta-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(189, 39, 52, 0.4);
+}
+
+.offrir-cta-btn.secondary {
+    background: transparent;
+    color: var(--texte);
+    border: 2px solid var(--rouge);
+}
+
+.offrir-cta-btn.secondary:hover {
+    background: rgba(189, 39, 52, 0.1);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   SUPPRESSION BORDURE FOOTER
+   ======================================== */
+
+body:has(.offrir-page) footer {
+    margin-top: 0;
+}
+
+/* ========================================
+   BARRE DE PROGRESSION
+   ======================================== */
+
+.offrir-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 3rem;
+}
+
+.offrir-progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.offrir-progress-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--fond);
+    border: 2px solid rgba(189, 39, 52, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgba(247, 248, 249, 0.4);
+    transition: all 0.4s ease;
+}
+
+.offrir-progress-step.actif .offrir-progress-num {
+    background: var(--rouge);
+    border-color: var(--rouge);
+    color: var(--texte);
+    box-shadow: 0 0 20px rgba(189, 39, 52, 0.4);
+}
+
+.offrir-progress-step.done .offrir-progress-num {
+    background: var(--rouge);
+    border-color: var(--rouge);
+    color: var(--texte);
+}
+
+.offrir-progress-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(247, 248, 249, 0.4);
+    transition: color 0.4s ease;
+}
+
+.offrir-progress-step.actif .offrir-progress-label,
+.offrir-progress-step.done .offrir-progress-label {
+    color: var(--texte);
+}
+
+.offrir-progress-bar {
+    flex: 1;
+    height: 3px;
+    background: rgba(189, 39, 52, 0.15);
+    margin: 0 0.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 3px;
+    overflow: hidden;
+    max-width: 100px;
+}
+
+.offrir-progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--rouge);
+    transition: width 0.5s ease;
+}
+
+/* ========================================
+   ÉTAPES CONTENU (SHOW/HIDE)
+   ======================================== */
+
+.offrir-etape-contenu {
+    display: none;
+    animation: offrir-fadeIn 0.5s ease;
+}
+
+.offrir-etape-contenu.actif {
+    display: block;
+}
+
+@keyframes offrir-fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================
+   FORMULE CARDS – SÉLECTION
+   ======================================== */
+
+.offrir-formule-card {
+    cursor: pointer;
+}
+
+.offrir-formule-card.selected {
+    border-color: var(--rouge);
+    box-shadow: 0 0 30px rgba(189, 39, 52, 0.3);
+    transform: translateY(-6px);
+}
+
+.offrir-formule-desc {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(247, 248, 249, 0.75);
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.offrir-formule-validite {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(247, 248, 249, 0.6);
+    margin-bottom: 1.5rem;
+}
+
+.offrir-formule-validite svg {
+    color: var(--rouge);
+}
+
+/* ========================================
+   AVENTURE CARDS – SÉLECTION
+   ======================================== */
+
+.offrir-selection-compteur {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--rouge);
+    letter-spacing: 0.02em;
+}
+
+.offrir-aventures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.offrir-aventure-card {
+    background: var(--fond);
+    border: 2px solid rgba(189, 39, 52, 0.12);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.offrir-aventure-card:hover {
+    border-color: rgba(189, 39, 52, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(189, 39, 52, 0.15);
+}
+
+.offrir-aventure-card.selected {
+    border-color: var(--rouge);
+    box-shadow: 0 0 25px rgba(189, 39, 52, 0.3);
+}
+
+.offrir-aventure-img {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.offrir-aventure-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.offrir-aventure-card:hover .offrir-aventure-img img {
+    transform: scale(1.05);
+}
+
+.offrir-aventure-info {
+    padding: 1.2rem;
+    flex-grow: 1;
+}
+
+.offrir-aventure-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.6rem 0;
+    color: var(--texte);
+}
+
+.offrir-aventure-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(247, 248, 249, 0.6);
+}
+
+.offrir-aventure-meta span {
+    background: rgba(189, 39, 52, 0.08);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+}
+
+.offrir-aventure-check {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--rouge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.offrir-aventure-check svg {
+    color: white;
+}
+
+.offrir-aventure-card.selected .offrir-aventure-check {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ========================================
+   PERSONNALISATION
+   ======================================== */
+
+.offrir-perso-card {
+    max-width: 650px;
+    margin: 2rem auto 0;
+    background: var(--fond);
+    border: 1px solid rgba(189, 39, 52, 0.15);
+    border-radius: 18px;
+    padding: 2.5rem;
+}
+
+.offrir-perso-groupe {
+    margin-bottom: 2rem;
+}
+
+.offrir-perso-groupe:last-child {
+    margin-bottom: 0;
+}
+
+.offrir-perso-groupe label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texte);
+    margin-bottom: 0.8rem;
+}
+
+.offrir-perso-groupe label svg {
+    color: var(--rouge);
+}
+
+.offrir-perso-groupe label span {
+    color: var(--rouge);
+}
+
+.offrir-perso-groupe input,
+.offrir-perso-groupe textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: var(--texte);
+    background: var(--fond2);
+    border: 2px solid rgba(189, 39, 52, 0.12);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.offrir-perso-groupe input:focus,
+.offrir-perso-groupe textarea:focus {
+    border-color: var(--rouge);
+    box-shadow: 0 0 12px rgba(189, 39, 52, 0.2);
+}
+
+.offrir-perso-groupe input::placeholder,
+.offrir-perso-groupe textarea::placeholder {
+    color: rgba(247, 248, 249, 0.4);
+}
+
+.offrir-perso-groupe textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.offrir-char-count {
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(247, 248, 249, 0.4);
+    margin-top: 0.4rem;
+}
+
+/* ========================================
+   RÉCAPITULATIF
+   ======================================== */
+
+.offrir-recap-card {
+    max-width: 650px;
+    margin: 2rem auto;
+    background: var(--fond);
+    border: 2px solid rgba(189, 39, 52, 0.2);
+    border-radius: 18px;
+    padding: 2.5rem;
+}
+
+.offrir-recap-ligne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(189, 39, 52, 0.08);
+}
+
+.offrir-recap-ligne:last-child {
+    border-bottom: none;
+}
+
+.offrir-recap-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: rgba(247, 248, 249, 0.6);
+}
+
+.offrir-recap-valeur {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--texte);
+}
+
+.offrir-recap-prix {
+    font-size: 1.3rem;
+    color: var(--rouge);
+}
+
+.offrir-recap-message-bloc {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.offrir-recap-message {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(247, 248, 249, 0.8);
+    font-style: italic;
+    background: rgba(189, 39, 52, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   BOUTONS NAVIGATION
+   ======================================== */
+
+.offrir-nav-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.offrir-btn-retour,
+.offrir-btn-suivant {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--rouge);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.offrir-btn-retour {
+    background: transparent;
+    color: var(--texte);
+}
+
+.offrir-btn-retour:hover {
+    background: rgba(189, 39, 52, 0.1);
+}
+
+.offrir-btn-suivant {
+    background: var(--rouge);
+    color: var(--texte);
+}
+
+.offrir-btn-suivant:hover:not(:disabled) {
+    box-shadow: 0 8px 25px rgba(189, 39, 52, 0.4);
+    transform: translateY(-2px);
+}
+
+.offrir-btn-suivant:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.offrir-btn-payer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    background: var(--rouge);
+    color: var(--texte);
+    border: 2px solid var(--rouge);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.offrir-btn-payer:hover {
+    box-shadow: 0 10px 30px rgba(189, 39, 52, 0.5);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .offrir-hero h1 {
+        font-size: 3rem;
+    }
+
+    .offrir-etapes-grid,
+    .offrir-formules-grid,
+    .offrir-raisons-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .offrir-aventures-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .offrir-title-center {
+        font-size: 2rem;
+    }
+
+    .offrir-progress-label {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .offrir-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .offrir-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .offrir-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .offrir-hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .offrir-cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .offrir-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offrir-cta-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .offrir-perso-card {
+        padding: 1.5rem;
+    }
+
+    .offrir-recap-card {
+        padding: 1.5rem;
+    }
+
+    .offrir-nav-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offrir-btn-retour,
+    .offrir-btn-suivant,
+    .offrir-btn-payer {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .offrir-hero h1 {
+        font-size: 2rem;
+    }
+}

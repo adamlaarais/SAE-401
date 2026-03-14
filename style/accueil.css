@@ -1,0 +1,1185 @@
+body {
+    margin: 0;
+    background-color: var(--fond);
+    color: var(--texte);
+}
+
+section {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    margin-top: 60px;
+    text-align: center;
+
+    strong {
+        color: var(--rouge);
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.container-aventures-populaires img {
+    width: 45%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+    min-height: 100%;
+}
+
+.section-accueil h1 strong {
+    color: var(--rouge);
+}
+
+.section-accueil {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    h1 {
+        width: 50%;
+    }
+
+    p {
+        width: 30%;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+    }
+
+    a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        position: relative;
+        z-index: 1;
+        color: var(--texte);
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #decouvrir {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--rouge);
+        min-width: 10rem;
+        padding: 10px 20px;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            box-shadow 0.4s ease,
+            background-color 0.4s ease;
+        box-shadow: 0 5px 20px rgba(189, 39, 52, 0.4);
+        flex-shrink: 0;
+    }
+
+    #decouvrir::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease;
+        z-index: 0;
+    }
+
+    #decouvrir:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 30px rgba(189, 39, 52, 0.7);
+        background-color: #d32f3d;
+    }
+
+    #decouvrir:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    #nous-contacter {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 10rem;
+        background-color: var(--fond2);
+        border: 2px solid var(--rouge);
+        padding: 10px 20px;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+            box-shadow 0.4s ease,
+            background-color 0.4s ease,
+            border-color 0.4s ease;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        flex-shrink: 0;
+    }
+
+    #nous-contacter::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(189, 39, 52, 0.3), transparent);
+        transition: left 0.6s ease;
+        z-index: 0;
+    }
+
+    #nous-contacter:hover {
+        transform: translateY(-5px) scale(1.05);
+        background-color: var(--rouge);
+        border-color: var(--rouge);
+        box-shadow: 0 8px 30px rgba(189, 39, 52, 0.6);
+    }
+
+    #nous-contacter:hover::before {
+        left: 100%;
+    }
+}
+
+.section-accueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.section-accueil h1,
+.section-accueil p,
+.section-accueil a {
+    position: relative;
+    z-index: 1;
+    color: var(--texte);
+    margin-left: 2rem 0.5rem 2rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.section-accueil_particules {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bouton-accueil {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/*Contenu de la page */
+
+.flex-aventures-populaires {
+    display: flex;
+    justify-content: center;
+}
+
+.aventures-populaires {
+    display: flex;
+    background-color: var(--fond2);
+    margin-top: 80px;
+    width: 95%;
+    padding: 24px;
+    border-radius: 20px;
+    gap: 80px;
+}
+
+.container-aventures-populaires {
+    display: flex;
+    background-color: var(--fond);
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+        width: 320px;
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 20px 0 0 20px;
+    }
+}
+
+.enfant-aventures-populaires {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 16px;
+    padding: 25px;
+}
+
+.titre-aventure {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--rouge);
+}
+
+.description-aventure {
+    width: 95%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info-aventure {
+    color: var(--texte);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121.479%;
+    /* 24.296px */
+    letter-spacing: 0.6px;
+}
+
+.container-prix-aventure {
+    div {
+        color: var(--texte);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 121.479%;
+        /* 19.437px */
+        letter-spacing: 0.48px;
+    }
+
+    .prix-aventure {
+        margin-top: 16px;
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
+.bouton-reservation-a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--texte, #fff);
+    font-size: 16px;
+    font-weight: 700;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: var(--rouge, #bd2734);
+    border-radius: 28px;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 6px 18px rgba(189, 39, 52, 0.12);
+}
+
+.bouton-reservation-a .bouton-reservation {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bouton-reservation-a:hover {
+    filter: brightness(1.06);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 30px rgba(189, 39, 52, 0.16);
+}
+
+
+/* Section contenu 2 */
+.section-accueil-contenu-2 {
+    margin-top: 10rem;
+}
+
+.flex-container-aventures {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.container-plus-aventures {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap !important;
+    gap: 54px;
+    overflow-x: auto;
+    width: 100%;
+    scroll-behavior: smooth;
+    padding: 20px 2rem;
+}
+
+.container-plus-aventures::-webkit-scrollbar {
+    display: none;
+}
+
+.enfant-container-plus-aventures {
+    flex: 0 0 380px;
+    background-color: var(--fond2);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    padding: 10px;
+    transform: scale(0.92);
+    opacity: 0.55;
+    transition: transform 0.45s ease, opacity 0.45s ease, border 0.3s;
+    cursor: pointer;
+}
+
+.enfant-container-plus-aventures.actif {
+    transform: scale(1);
+    opacity: 1;
+    border: 2px solid var(--rouge);
+}
+
+.enfant-container-plus-aventures:hover {
+    border: 2px solid var(--rouge);
+}
+
+.enfant-container-plus-aventures:last-child {
+    margin-right: 4rem;
+}
+
+.compteur-aventures {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--texte);
+    min-width: 64px;
+    text-align: center;
+}
+
+.enfant-container-plus-aventures img {
+    border-radius: 20px 20px 0 0;
+}
+
+.container-enfant-plus-aventures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.bouton-reservation-a.plus {
+    width: 321px;
+    pointer-events: none;
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+}
+
+.enfant-container-plus-aventures.actif .bouton-reservation-a.plus {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.nav-fleches {
+    display: flex;
+    justify-content: end;
+    margin-right: 6rem;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.fleche {
+    background: none;
+    border: none;
+    color: var(--rouge);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fleche:hover {
+    transform: scale(1.2);
+}
+
+#btn-gauche svg {
+    transform: rotate(180deg);
+}
+
+.container-voir-plus {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Barre de progression */
+.barre-progression-fond {
+    width: 300px;
+    height: 4px;
+    background: #444;
+    margin: 20px auto;
+    position: relative;
+}
+
+.barre-progression-remplissage {
+    width: 20%;
+    height: 100%;
+    background: var(--rouge);
+    transition: all 0.2s ease-out;
+}
+
+
+/* QUESTIONS FRÉQUENTES*/
+.section-accueil-questions {
+    margin-top: 10rem;
+}
+
+.flex-container-questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 7rem;
+}
+
+.enfant-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.question-container {
+    width: 1028px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.question {
+    background-color: var(--fond2);
+    width: 1028px;
+    padding: 10px 12px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.question-entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+}
+
+.question-reponse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 8px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.question--ouvert .question-reponse {
+    max-height: 200px;
+    padding: 12px 8px 4px;
+}
+
+.question-chevron {
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.question--ouvert .question-chevron {
+    transform: rotate(180deg);
+}
+
+.enfant-svg-question {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.elipse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--rouge);
+    border-radius: 100%;
+}
+
+.enfant-img-questions {
+    width: 482px;
+    height: 632px;
+    border: 4px solid var(--rouge);
+    border-radius: 20px;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+}
+
+
+/** AVIS CLIENTS **/
+.section-accueil-avis {
+    margin-top: 10rem;
+}
+
+.flex-container-avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.icon-avis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.container-star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+}
+
+.avis-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    max-width: 100vw;
+    margin-top: 64px;
+}
+
+.avis-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+.avis-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.avis-row-1 .avis-track {
+    animation-name: scroll-left;
+}
+
+.avis-row-2 .avis-track {
+    animation-name: scroll-right;
+    animation-duration: 45s;
+}
+
+.carte {
+    background-color: var(--fond2);
+    border: 8px solid var(--rouge);
+    border-radius: 24px;
+    padding: 28px;
+    max-width: 100%;
+    width: 20vw;
+
+}
+
+.compte {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.citation {
+    font-style: italic;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ACCUEIL
+   ══════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+    .section-accueil h1 {
+        width: 80%;
+        font-size: 38px;
+    }
+
+    .section-accueil p {
+        width: 60%;
+        font-size: 15px;
+    }
+
+    .bouton-accueil {
+        width: 50%;
+    }
+
+    .section-accueil #decouvrir,
+    .section-accueil #nous-contacter {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+
+    /* Aventures populaires */
+    .aventures-populaires {
+        flex-direction: column;
+        gap: 30px;
+        width: 92%;
+    }
+
+    .container-aventures-populaires {
+        flex-direction: column;
+    }
+
+    .container-aventures-populaires img {
+        width: 100%;
+        height: 250px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .titre-aventure {
+        font-size: 24px;
+    }
+
+    .description-aventure {
+        font-size: 17px;
+    }
+
+    .info-aventure {
+        font-size: 17px;
+    }
+
+    .container-prix-aventure .prix-aventure {
+        font-size: 28px;
+    }
+
+    /* Carrousel */
+    .section-accueil-contenu-2 {
+        margin-top: 6rem;
+    }
+
+    .section-accueil-contenu-2 h1 {
+        font-size: 30px;
+    }
+
+    .container-plus-aventures {
+        gap: 30px;
+        padding: 20px 2rem;
+    }
+
+    .enfant-container-plus-aventures {
+        flex: 0 0 300px;
+    }
+
+    .bouton-reservation-a.plus {
+        width: 260px;
+    }
+
+    /* Questions */
+    .flex-container-questions {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .enfant-img-questions {
+        display: none;
+    }
+
+    .question-container,
+    .question {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section-accueil-questions {
+        margin-top: 6rem;
+        padding: 0 24px;
+    }
+
+    .enfant-questions {
+        font-size: 26px;
+    }
+
+    .question-entete {
+        font-size: 18px;
+    }
+
+    .question-reponse {
+        font-size: 15px;
+    }
+
+    /* Avis tablette */
+    .section-accueil-avis {
+        margin-top: 6rem;
+    }
+
+    .carte {
+        width: 30vw;
+        padding: 20px;
+        border-width: 4px;
+        font-size: 14px;
+    }
+
+    .carte .citation {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .carte .compte {
+        font-size: 13px;
+    }
+
+    .avis-track {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-accueil h1 {
+        width: 90%;
+        font-size: 26px;
+        margin-top: 30px;
+    }
+
+    .section-accueil p {
+        width: 85%;
+        font-size: 13px;
+    }
+
+    .bouton-accueil {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .section-accueil #decouvrir,
+    .section-accueil #nous-contacter {
+        width: 100%;
+        max-width: 260px;
+        font-size: 14px;
+        padding: 9px 16px;
+        min-width: unset;
+    }
+
+    .flex-aventures-populaires {
+        padding: 0 10px;
+    }
+
+    .aventures-populaires {
+        width: 100%;
+        padding: 14px;
+        gap: 16px;
+        margin-top: 40px;
+        box-sizing: border-box;
+    }
+
+    .container-aventures-populaires img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .enfant-aventures-populaires {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .titre-aventure {
+        font-size: 20px;
+    }
+
+    .description-aventure {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .info-aventure {
+        font-size: 14px;
+    }
+
+    .container-prix-aventure div {
+        font-size: 13px;
+    }
+
+    .container-prix-aventure .prix-aventure {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    .bouton-reservation-a {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    /* ── Carousel aventures ── */
+    .section-accueil-contenu-2 {
+        margin-top: 4rem;
+    }
+
+    .section-accueil-contenu-2 h1 {
+        font-size: 22px;
+        padding: 0 16px;
+    }
+
+    .container-plus-aventures {
+        gap: 14px;
+        padding: 10px 14px;
+    }
+
+    .enfant-container-plus-aventures {
+        flex: 0 0 200px;
+        padding: 6px;
+        border-radius: 14px;
+    }
+
+    .enfant-container-plus-aventures img {
+        border-radius: 14px 14px 0 0;
+    }
+
+    .container-enfant-plus-aventures {
+        padding: 8px 6px;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .container-enfant-plus-aventures .titre-aventure {
+        font-size: 15px;
+    }
+
+    .bouton-reservation-a.plus {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .enfant-container-plus-aventures:last-child {
+        margin-right: 1rem;
+    }
+
+    .compteur-aventures {
+        font-size: 14px;
+        min-width: 40px;
+    }
+
+    .nav-fleches {
+        margin-right: 1rem;
+        gap: 8px;
+    }
+
+    .barre-progression-fond {
+        width: 200px;
+    }
+
+    /* ── Questions ── */
+    .section-accueil-questions {
+        margin-top: 4rem;
+        padding: 0 16px;
+    }
+
+    .section-accueil-questions h1 {
+        font-size: 22px;
+    }
+
+    .flex-container-questions {
+        margin-top: 3rem;
+        gap: 20px;
+    }
+
+    .enfant-questions {
+        font-size: 18px;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .question {
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border-radius: 14px;
+    }
+
+    .question-container {
+        width: 100% !important;
+    }
+
+    .question-entete {
+        min-height: 36px;
+        font-size: 15px;
+    }
+
+    .question-reponse {
+        font-size: 13px;
+    }
+
+    .elipse {
+        width: 40px;
+        height: 40px;
+    }
+
+    .elipse svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .enfant-svg-question {
+        gap: 12px;
+    }
+
+    /* ── Avis ── */
+    .section-accueil-avis {
+        margin-top: 4rem;
+    }
+
+    .section-accueil-avis h1 {
+        font-size: 22px;
+    }
+
+    .avis-container {
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .avis-track {
+        gap: 14px;
+    }
+
+    .carte {
+        width: 55vw;
+        padding: 14px;
+        border-width: 3px;
+        border-radius: 14px;
+        font-size: 12px;
+    }
+
+    .carte .citation {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    .carte .compte {
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    .icon-avis {
+        gap: 8px;
+    }
+
+    .container-star {
+        gap: 10px;
+    }
+
+    .container-star svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-accueil h1 {
+        width: 95%;
+        font-size: 20px;
+    }
+
+    .section-accueil p {
+        width: 92%;
+        font-size: 11px;
+    }
+
+    .section-accueil #decouvrir,
+    .section-accueil #nous-contacter {
+        max-width: 220px;
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .bouton-accueil {
+        gap: 10px;
+    }
+
+    .container-aventures-populaires img {
+        height: 140px;
+    }
+
+    .aventures-populaires {
+        padding: 10px;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .enfant-aventures-populaires {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .titre-aventure {
+        font-size: 16px;
+    }
+
+    .description-aventure {
+        font-size: 12px;
+    }
+
+    .info-aventure {
+        font-size: 12px;
+    }
+
+    .container-prix-aventure div {
+        font-size: 11px;
+    }
+
+    .container-prix-aventure .prix-aventure {
+        font-size: 18px;
+    }
+
+    .bouton-reservation-a {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    /* Carousel encore plus petit */
+    .enfant-container-plus-aventures {
+        flex: 0 0 170px;
+        padding: 5px;
+    }
+
+    .enfant-container-plus-aventures img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container-enfant-plus-aventures {
+        font-size: 11px;
+        gap: 6px;
+        padding: 6px 4px;
+    }
+
+    .container-enfant-plus-aventures .titre-aventure {
+        font-size: 13px;
+    }
+
+    .bouton-reservation-a.plus {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    .container-plus-aventures {
+        gap: 12px;
+        padding: 10px 10px;
+    }
+
+    .nav-fleches {
+        margin-right: 0.5rem;
+    }
+
+    .fleche {
+        font-size: 1.5rem;
+    }
+
+    .barre-progression-fond {
+        width: 160px;
+    }
+
+    /* Questions */
+    .section-accueil-questions {
+        margin-top: 3rem;
+    }
+
+    .section-accueil-questions h1 {
+        font-size: 20px;
+    }
+
+    .enfant-questions {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .question-entete {
+        font-size: 13px;
+        min-height: 32px;
+    }
+
+    .question-reponse {
+        font-size: 11px;
+    }
+
+    .elipse {
+        width: 34px;
+        height: 34px;
+    }
+
+    .elipse svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Avis */
+    .section-accueil-avis {
+        margin-top: 2.5rem;
+    }
+
+    .section-accueil-avis h1 {
+        font-size: 20px;
+    }
+
+    .carte {
+        width: 52vw;
+        padding: 10px;
+        border-width: 2px;
+        border-radius: 10px;
+        font-size: 11px;
+    }
+
+    .carte .citation {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .carte .compte {
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .avis-container {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .avis-track {
+        gap: 10px;
+    }
+}

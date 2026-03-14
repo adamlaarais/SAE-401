@@ -1,0 +1,323 @@
+/* --- LAYOUT GLOBAL PLEIN ÉCRAN --- */
+.page-compte {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9999;
+    display: flex;
+    background-color: var(--fond);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- PANNEAU GAUCHE (Canvas) --- */
+.panel-image {
+    flex: 1;
+    position: relative;
+    border-right: 2px solid #000;
+    overflow: hidden;
+    background-color: #0d0d0d;
+}
+
+.panel-image #canvasParticules {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.logo-overlay:hover {
+    opacity: 0.8;
+}
+
+.logo-image {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* --- PANNEAU DROIT (Formulaire) --- */
+.panel-formulaire {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--fond);
+}
+
+.form-box {
+    background-color: #2e151b;
+    padding: 35px 40px;
+    /* J'ai réduit le padding intérieur (avant: 50px) */
+    border-radius: 20px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    /* SÉCURITÉ : Empêche la boîte d'être plus grande que l'écran */
+    max-height: 90vh;
+    overflow-y: auto;
+    /* Ajoute un scroll interne si besoin */
+}
+
+/* Optionnel : Personnaliser la petite barre de scroll interne pour qu'elle soit jolie */
+.form-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.form-box::-webkit-scrollbar-thumb {
+    background-color: var(--rouge);
+    border-radius: 10px;
+}
+
+.form-titre {
+    text-align: center;
+    font-size: 1.8rem;
+    /* Légèrement réduit (avant: 2rem) */
+    margin-top: 0;
+    margin-bottom: 25px;
+    /* Moins de vide sous le titre (avant: 40px) */
+    color: var(--texte);
+}
+
+.form-titre span {
+    color: var(--rouge);
+}
+
+/* --- NOTIFICATION D'ERREUR FORMULAIRE --- */
+.notif-erreur-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(189, 39, 52, 0.2);
+    border: 1px solid var(--rouge);
+    color: #ff6b6b;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    animation: shake 0.4s ease;
+}
+
+.notif-erreur-form svg {
+    flex-shrink: 0;
+    stroke: #ff6b6b;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-4px); }
+}
+
+/* --- CORRECTION DU FIELDSET PHP ET GRILLE --- */
+.form-kodex fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.form-inscription fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    /* J'ai réduit l'espace entre les champs (avant: 20px) */
+}
+
+/* Forcer Adresse, Pays, Boutons et Liens à prendre toute la largeur */
+.form-inscription fieldset>*:has(input[name="adresse"]),
+.form-inscription fieldset>*:has(input[name="pays"]) {
+    grid-column: 1 / -1;
+}
+
+.form-inscription input[type="submit"],
+.form-inscription .lien-bas {
+    grid-column: 1 / -1;
+}
+
+.form-connexion fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-kodex input[type="text"],
+.form-kodex input[type="password"],
+.form-kodex input[type="email"],
+.form-kodex input[type="date"] {
+    background-color: transparent;
+    border: 1px solid var(--rouge);
+    color: var(--texte);
+    padding: 10px 15px;
+    /* Réduit pour gagner de la place (avant: 12px 18px) */
+    border-radius: 12px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* ajustement du padding droit pour le bouton oeil */
+.form-kodex .password-wrapper input[type="password"],
+.form-kodex .password-wrapper input[type="text"] {
+    padding-right: 45px;
+}
+
+/* reset du style du bouton toggle dans le contexte du formulaire kodex */
+.form-kodex .toggle-password {
+    margin-top: 0;
+    width: 24px;
+    min-width: 24px;
+    padding: 0;
+    font-size: 0;
+    background: none;
+    border: none;
+}
+
+.form-kodex input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(193, 39, 45, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-kodex label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--texte);
+    opacity: 0.9;
+}
+
+.form-kodex label span {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.form-kodex input[type="submit"],
+.form-kodex button {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--rouge);
+    color: white;
+    border: none;
+    padding: 14px;
+    /* Légèrement réduit (avant: 16px) */
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    margin-top: 15px;
+    /* Moins de marge au-dessus du bouton (avant: 25px) */
+    width: 100%;
+}
+
+.form-kodex input[type="submit"]:hover,
+.form-kodex button:hover {
+    filter: brightness(1.2);
+}
+
+.lien-bas {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    color: var(--texte);
+    opacity: 0.8;
+}
+
+.lien-bas a {
+    color: var(--rouge);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lien-bas a:hover {
+    text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE COMPTE (CONNEXION / INSCRIPTION)
+   ══════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+    .page-compte {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+    }
+
+    .panel-image {
+        display: none;
+    }
+
+    .panel-formulaire {
+        flex: none;
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form-box {
+        max-width: 100%;
+        max-height: none;
+        padding: 30px 25px;
+    }
+
+    .form-inscription fieldset {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-titre {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-formulaire {
+        padding: 16px;
+    }
+
+    .form-box {
+        padding: 25px 18px;
+        border-radius: 16px;
+    }
+
+    .form-titre {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .form-kodex input[type="submit"],
+    .form-kodex button {
+        font-size: 1rem;
+    }
+}

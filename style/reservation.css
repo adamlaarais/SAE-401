@@ -1,0 +1,801 @@
+body {
+    background-color: var(--fond);
+    color: var(--texte);
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+.reservation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 160px auto 40px auto;
+    padding: 20px;
+}
+
+.aventure-info {
+    grid-column: 1;
+}
+
+.aventure-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.aventure-image-thumb {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border: 2px solid var(--rouge);
+    flex-shrink: 0;
+}
+
+.aventure-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.aventure-titles h3 {
+    color: var(--rouge);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    margin-top: 0;
+}
+
+.aventure-titles h4 {
+    color: var(--texte);
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.aventure-info p {
+    color: var(--texte);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.specs {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--rouge);
+}
+
+.specs p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.specs span {
+    color: var(--texte);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.aventure-joueurs {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    border-left: 1px solid var(--rouge);
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aventure-horaire {
+    margin-top: -30px;
+}
+
+.aventure-joueurs>p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.aventure-joueurs input[type="number"] {
+    background-color: var(--fond2);
+    border: 1px solid var(--rouge);
+    color: var(--texte);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+    width: 120px;
+    margin: 0 auto 30px auto;
+    display: block;
+}
+
+.total-price {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.aventure-joueurs p b {
+    color: var(--texte);
+}
+
+.aventure-joueurs form>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: var(--texte);
+    opacity: 0.9;
+}
+
+.btn-reserver {
+    background-color: var(--rouge);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Montserrat", sans-serif;
+    white-space: nowrap;
+}
+
+.btn-reserver:hover {
+    filter: brightness(1.2);
+}
+
+.player-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--fond2);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.btn-circle:hover {
+    background-color: var(--rouge);
+}
+
+.big-number-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display-nb-joueurs {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.label-joueurs {
+    color: var(--texte);
+    opacity: 0.8;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.player-selector-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.btn-player-num {
+    flex: 1;
+    background-color: var(--fond2);
+    border: 1px solid transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.btn-player-num:hover {
+    border-color: var(--rouge);
+}
+
+.btn-player-num.active {
+    border-color: var(--rouge);
+    background-color: rgba(193, 39, 45, 0.2);
+}
+
+.icon-small {
+    font-size: 0.8rem;
+    color: var(--texte);
+    opacity: 0.8;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+    user-select: none;
+}
+
+.custom-select-wrapper.open {
+    z-index: 100;
+}
+
+.custom-select-trigger {
+    background-color: var(--fond2);
+    border: 1px solid transparent;
+    color: var(--texte);
+    font-size: 1rem;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-select-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.custom-select-wrapper.open .custom-select-trigger {
+    border-color: var(--rouge);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.custom-select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--texte);
+    pointer-events: none;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.custom-select-wrapper.open::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.custom-select-options {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--fond2);
+    border: 1px solid var(--rouge);
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 1000;
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.custom-select-wrapper.open .custom-select-options {
+    display: block;
+}
+
+.custom-option {
+    padding: 15px 20px;
+    color: var(--texte);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.custom-option:hover {
+    background-color: var(--rouge);
+    color: white;
+}
+
+.custom-option.checked {
+    background-color: rgba(193, 39, 45, 0.2);
+    color: var(--rouge);
+    font-weight: bold;
+}
+
+.equipements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.equipement-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--fond2);
+    border-radius: 12px;
+    padding: 15px;
+    gap: 20px;
+}
+
+.equipement-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.equipement-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--texte);
+}
+
+.equipement-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.equipement-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.equipement-desc {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+.equipement-qty-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-display {
+    background-color: var(--rouge);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.qty-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.qty-btns button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--rouge);
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.qty-btns button:hover {
+    filter: brightness(1.2);
+}
+
+.total-box {
+    background-color: var(--fond2);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.total-left,
+.total-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-right {
+    text-align: right;
+}
+
+.calc-formula,
+.calc-total-top {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.calc-label {
+    color: var(--texte);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.resume-text p {
+    margin: 5px 0;
+    color: var(--texte);
+}
+
+.resume-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-info {
+    display: flex;
+    gap: 20px;
+}
+
+.resume-section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.btn-retour {
+    grid-column: 1 / -1;
+    display: inline-block;
+    color: var(--texte);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.btn-retour:hover {
+    color: var(--rouge);
+}
+
+/* CUSTOM CALENDAR STYLES */
+.calendar-custom-container {
+    background-color: #382225;
+    border-radius: 12px;
+    padding: 24px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    max-width: 360px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calendar-month-year {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 auto 0 0;
+    letter-spacing: 0.5px;
+    order: 1;
+}
+
+.btn-cal-prev {
+    order: 2;
+    margin-right: 16px;
+}
+
+.btn-cal-next {
+    order: 3;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.calendar-header button:hover {
+    opacity: 1;
+    color: var(--rouge, #c1272d);
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 12px;
+}
+
+.calendar-weekdays span {
+    color: white;
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#calendar-days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cal-day {
+    background-color: #382225;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 14px 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    font-family: inherit;
+    text-align: center;
+}
+
+.cal-day:hover:not(.disabled):not(.empty) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.cal-day.active {
+    background-color: var(--rouge, #c1272d); 
+    color: white;
+    font-weight: bold;
+}
+
+.cal-day.disabled {
+    background-color: #382225;
+    color: rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+}
+
+.cal-day.empty {
+    background-color: #1e1315;
+    color: rgba(255, 255, 255, 0.1);
+    cursor: default;
+}
+
+/* HORAIRES STYLES */
+.aventure-horaire > p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.aventure-horaire > p::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>');
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horaires-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 360px;
+}
+
+.btn-horaire {
+    background-color: #382225;
+    color: white;
+    border: 1px solid transparent;
+    padding: 12px 0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.btn-horaire:hover {
+    background-color: #4a2c30;
+}
+
+.btn-horaire.active {
+    background-color: rgba(211, 47, 47, 0.15);
+    border-color: var(--rouge, #c1272d);
+    color: white;
+}
+
+.equipment-img {
+    max-width: 100%;
+    width: 10lvw;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE RESERVATION
+   ══════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+    .reservation-container {
+        gap: 30px;
+        margin-top: 130px;
+        padding: 20px;
+    }
+
+    .aventure-titles h3 {
+        font-size: 1.9rem;
+    }
+
+    .aventure-joueurs {
+        padding-left: 30px;
+    }
+
+    .equipement-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .equipement-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    .reservation-container {
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+        gap: 30px;
+    }
+
+    .aventure-joueurs {
+        grid-column: 1;
+        grid-row: auto;
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--rouge);
+        padding-top: 30px;
+    }
+
+    .aventure-horaire {
+        margin-top: 0;
+    }
+
+    .horaires-container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+    }
+
+    .calendar-custom-container {
+        max-width: 100%;
+    }
+
+    .specs {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reservation-container {
+        margin-top: 80px;
+        padding: 16px;
+    }
+
+    .aventure-title-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .aventure-image-thumb {
+        width: 100%;
+        height: 180px;
+    }
+
+    .aventure-titles h3 {
+        font-size: 1.6rem;
+    }
+
+    .player-counter {
+        gap: 20px;
+    }
+
+    .display-nb-joueurs {
+        font-size: 3rem;
+    }
+
+    .player-selector-row {
+        flex-wrap: wrap;
+    }
+
+    .btn-player-num {
+        flex: 0 0 calc(25% - 8px);
+    }
+
+    .horaires-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipement-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .equipement-qty-ctrl {
+        align-self: flex-end;
+    }
+
+    .total-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .total-right {
+        text-align: left;
+    }
+
+    .resume-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resume-section-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
