@@ -5,7 +5,7 @@ body {
 /* Container Principal */
 .paiement-wrapper {
     min-height: 100vh;
-    padding-top: 120px;
+    padding-top: 88px;
     /* Espace pour le header */
     padding-bottom: 60px;
     display: flex;
@@ -21,13 +21,13 @@ body {
 }
 
 .paiement-entete h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 10px;
     margin-top: 0;
 }
 
 .paiement-entete p {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--texte);
 }
@@ -101,7 +101,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 800;
 }
 
@@ -207,9 +207,9 @@ body {
     color: var(--texte);
     border: none;
     border-radius: 25px;
-    padding: 16px;
+    padding: 13px;
     font-family: "Montserrat", sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -264,7 +264,7 @@ body {
 /* Responsive */
 @media (max-width: 1024px) {
     .paiement-wrapper {
-        padding-top: 100px;
+        padding-top: 76px;
     }
 
     .paiement-entete h1 {

@@ -5,7 +5,7 @@ body {
 /* Container Principal */
 .panier-wrapper {
     min-height: 100vh;
-    padding-top: 120px;
+    padding-top: 88px;
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
@@ -14,8 +14,8 @@ body {
 }
 
 .titre-page {
-    font-size: 48px;
-    margin-bottom: 50px;
+    font-size: 36px;
+    margin-bottom: 36px;
     margin-top: 0;
     text-align: center;
 }
@@ -54,8 +54,8 @@ body {
 }
 
 .article-image {
-    width: 220px;
-    height: 140px;
+    width: 170px;
+    height: 110px;
     flex-shrink: 0;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .nom-aventure {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 800;
     color: var(--rouge);
     margin: 0 0 5px 0;
@@ -171,9 +171,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 800;
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .prix-total {
@@ -185,9 +185,9 @@ body {
     color: var(--texte);
     border: none;
     border-radius: 25px;
-    padding: 16px;
+    padding: 13px;
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -236,7 +236,7 @@ body {
 /* Responsive */
 @media (max-width: 1024px) {
     .panier-wrapper {
-        padding-top: 100px;
+        padding-top: 76px;
     }
 
     .titre-page {

@@ -79,7 +79,7 @@ h2 strong {
 
 .entreprise-hero h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     margin: 0 0 1rem 0;
     color: var(--texte);
@@ -88,7 +88,7 @@ h2 strong {
 
 .entreprise-hero-subtitle {
     font-family: 'Lato', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: rgba(247, 248, 249, 0.8);
     margin: 0;
@@ -104,7 +104,7 @@ h2 strong {
    ======================================== */
 
 .entreprise-section {
-    padding: 5rem 2rem;
+    padding: 3.5rem 2rem;
 }
 
 .entreprise-container {
@@ -168,8 +168,8 @@ h2 strong {
 }
 
 .entreprise-visual-box {
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
     background: linear-gradient(135deg, var(--fond2) 0%, rgba(189, 39, 52, 0.1) 100%);
     border-radius: 20px;
     display: flex;
@@ -470,7 +470,7 @@ h2 strong {
 
 .entreprise-cta-content h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--texte);
     margin: 0 0 1rem 0;

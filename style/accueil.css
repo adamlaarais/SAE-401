@@ -9,7 +9,7 @@ section {
 }
 
 h1 {
-    margin-top: 60px;
+    margin-top: 40px;
     text-align: center;
 
     strong {
@@ -194,11 +194,11 @@ img {
 .aventures-populaires {
     display: flex;
     background-color: var(--fond2);
-    margin-top: 80px;
+    margin-top: 60px;
     width: 95%;
-    padding: 24px;
+    padding: 14px;
     border-radius: 20px;
-    gap: 80px;
+    gap: 40px;
 }
 
 .container-aventures-populaires {
@@ -208,7 +208,7 @@ img {
     overflow: hidden;
 
     img {
-        width: 320px;
+        width: 200px;
         height: 100%;
         object-fit: cover;
         flex-shrink: 0;
@@ -220,12 +220,12 @@ img {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 16px;
-    padding: 25px;
+    gap: 10px;
+    padding: 16px;
 }
 
 .titre-aventure {
-    font-size: 28px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -234,34 +234,32 @@ img {
 
 .description-aventure {
     width: 95%;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .info-aventure {
     color: var(--texte);
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 121.479%;
-    /* 24.296px */
     letter-spacing: 0.6px;
 }
 
 .container-prix-aventure {
     div {
         color: var(--texte);
-        font-size: 16px;
+        font-size: 11px;
         font-style: normal;
         font-weight: 300;
         line-height: 121.479%;
-        /* 19.437px */
         letter-spacing: 0.48px;
     }
 
     .prix-aventure {
-        margin-top: 16px;
-        font-size: 32px;
+        margin-top: 8px;
+        font-size: 20px;
         font-weight: 700;
     }
 }
@@ -431,27 +429,27 @@ img {
 
 /* QUESTIONS FRÉQUENTES*/
 .section-accueil-questions {
-    margin-top: 10rem;
+    margin-top: 6rem;
 }
 
 .flex-container-questions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin-top: 7rem;
+    gap: 36px;
+    margin-top: 4rem;
 }
 
 .enfant-questions {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    font-size: 32px;
+    gap: 20px;
+    font-size: 22px;
     font-weight: 500;
 }
 
 .question-container {
-    width: 1028px;
+    width: 680px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -459,9 +457,9 @@ img {
 
 .question {
     background-color: var(--fond2);
-    width: 1028px;
-    padding: 10px 12px;
-    border-radius: 20px;
+    width: 680px;
+    padding: 6px 8px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -480,7 +478,7 @@ img {
     overflow: hidden;
     transition: max-height 0.35s ease, padding 0.35s ease;
     padding: 0 8px;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 400;
 }
 
@@ -509,15 +507,15 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     border: 2px solid var(--rouge);
     border-radius: 100%;
 }
 
 .enfant-img-questions {
-    width: 482px;
-    height: 632px;
+    width: 300px;
+    height: 400px;
     border: 4px solid var(--rouge);
     border-radius: 20px;
 
