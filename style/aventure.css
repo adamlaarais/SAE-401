@@ -7,7 +7,7 @@ body {
 
 .aventure-page {
     max-width: 1100px;
-    margin: 140px auto 50px; 
+    margin: 140px auto 50px;
     padding: 0 20px;
 }
 
@@ -229,7 +229,7 @@ body {
     opacity: 1;
 }
 
-.champ-avis .form_elt > span {
+.champ-avis .form_elt>span {
     opacity: 0.7;
 }
 
@@ -276,7 +276,7 @@ body {
 
 .etoile-btn svg path {
     fill: none;
-    stroke: rgba(255,255,255,0.3);
+    stroke: rgba(255, 255, 255, 0.3);
     transition: fill 0.12s, stroke 0.12s;
 }
 

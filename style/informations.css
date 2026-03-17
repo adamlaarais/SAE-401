@@ -41,15 +41,22 @@ h2 strong {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(189, 39, 52, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(189, 39, 52, 0.08) 0%, transparent 50%);
     animation: pulse 8s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .info-hero-content {
@@ -64,6 +71,7 @@ h2 strong {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -321,10 +329,13 @@ h2 strong {
 }
 
 @keyframes statPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.5;
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.2);
         opacity: 1;
@@ -380,8 +391,13 @@ h2 strong {
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .projet-badge {

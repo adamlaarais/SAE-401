@@ -485,7 +485,8 @@ header {
     transition: opacity 0.2s ease 0s;
 }
 
-.icons div, .icons a {
+.icons div,
+.icons a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -496,7 +497,8 @@ header {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), fill 0.3s ease, stroke 0.3s ease, filter 0.3s ease;
 }
 
-.icons div:hover svg, .icons a:hover svg {
+.icons div:hover svg,
+.icons a:hover svg {
     transform: scale(1.15) translateY(-2px);
     filter: drop-shadow(0 4px 8px rgba(189, 39, 52, 0.4));
 }
@@ -1163,7 +1165,7 @@ footer {
     gap: 8px;
 }
 
-.form_elt > span {
+.form_elt>span {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--texte);

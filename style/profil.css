@@ -104,7 +104,7 @@
 
 /* Astérisques en rouge */
 .form-profil label span::after {
-    
+
     color: var(--rouge);
 }
 

@@ -156,14 +156,14 @@ body {
 }
 
 .groupe-input label,
-.form-paiement .form_elt > span {
+.form-paiement .form_elt>span {
     font-size: 14px;
     color: var(--texte);
     font-weight: 500;
 }
 
 .groupe-input label span,
-.form-paiement .form_elt > span span {
+.form-paiement .form_elt>span span {
     color: var(--rouge);
     /* L'astérisque en rouge */
 }
